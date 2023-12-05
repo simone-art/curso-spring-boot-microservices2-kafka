@@ -1,5 +1,6 @@
 package com.store.car.entity;
 
+import com.store.car.dto.CarPostDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,7 +24,7 @@ public class CarPostEntity {
     private String brand;
 
     @Column(name = "car_price")
-    private String price;
+    private Double price;
 
     @Column(name = "car_description")
     private String description;
