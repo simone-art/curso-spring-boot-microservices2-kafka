@@ -17,9 +17,9 @@ public class OwnerPostController {
     @Autowired
     private OwnerPostService ownerPostService;
 
-    @PostMapping("/post")
+    @PostMapping
     public ResponseEntity postCarForSale (@RequestBody OwnerPostDto ownerPostDto){
-       ownerPostService.createdOwnerPots(ownerPostDto);
+        ownerPostService.createdOwnerPots(ownerPostDto);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
