@@ -19,6 +19,6 @@ public class OwnerPostServiceImpl implements OwnerPostService{
         ownerPostEntity.setType(ownerPostDto.getType());
         ownerPostEntity.setContactNumber(ownerPostDto.getContactNumber());
 
-        ownerPostRepository.save(ownerPostEntity); 
+        ownerPostRepository.save(ownerPostEntity);
     }
 }
