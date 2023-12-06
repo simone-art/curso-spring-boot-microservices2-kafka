@@ -40,7 +40,7 @@ public class KafkaConsumerConfig {
     }
 
     @Bean
-    // DEixa o listener preparado para ouvir o tópico
+    // Deixa o listener preparado para ouvir o tópico
     public ConcurrentKafkaListenerContainerFactory<String, CarPostDto> kafkaListenerContainerFactory(){
         ConcurrentKafkaListenerContainerFactory<String, CarPostDto> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());

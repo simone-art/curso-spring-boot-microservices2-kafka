@@ -1,10 +1,11 @@
 package com.store.car.entity;
 
 import com.store.car.dto.CarPostDto;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="car_post")
