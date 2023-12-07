@@ -29,7 +29,7 @@ public class CarPostServiceImpl implements CarPostService{
     private CarPostEntity mapCarDtoToEntity(CarPostDto carPostDto) {
         CarPostEntity carPostEntity = new CarPostEntity();
         ownerPostRepository.findById(carPostDto.getOwnerId()).ifPresentOrElse(item->{
-            carPostEntity.setOwnerId(item.getId());
+            carPostEntity.setOwnerPostEntity(item);
             carPostEntity.setContact(item.getContactNumber());
         }, ()->{
             throw new RuntimeException();
@@ -42,6 +42,7 @@ public class CarPostServiceImpl implements CarPostService{
         carPostEntity.setEngineVersion(carPostDto.getEngineVersion());
         carPostEntity.setCreateDate(String.valueOf(new Date()));
         carPostEntity.setPrice(carPostDto.getPrice());
+        carPostEntity.setOwnerId(carPostDto.getOwnerId());
         carPostEntity.setOwnerType(carPostDto.getOwnerType());
         carPostEntity.setOwnerName(carPostDto.getOwnerName());
         carPostEntity.setContact(carPostDto.getContact());

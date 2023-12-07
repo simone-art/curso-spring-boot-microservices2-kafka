@@ -1,6 +1,5 @@
 package com.store.car.entity;
 
-import com.store.car.dto.CarPostDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +18,7 @@ public class CarPostEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
 
     @Column(name = "car_model")
     private String model;
